@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import "../styles/ProductCard.css";
 
-const ProductCard = ({ id, name, price, addToCart }) => {
+const ProductCard = ({ id, name, price }) => {
+  const { addToCart } = useCart();
+
   return (
     <div className="product-card">
       <Link to={`/product/${id}`} className="product-link">

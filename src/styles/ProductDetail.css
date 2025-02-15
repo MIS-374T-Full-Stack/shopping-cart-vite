@@ -51,3 +51,16 @@
     background-color: #0056b3;
   }
   
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    max-width: 150px;
+    text-align: center;
+  }
+  

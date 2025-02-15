@@ -1,5 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import "../styles/Home.css";
+import { useCart } from "../context/CartContext";
 
 const products = [
   { id: 1, name: "Product 1", price: 10 },
@@ -7,7 +8,9 @@ const products = [
   { id: 3, name: "Product 3", price: 30 },
 ];
 
-const Home = ({ addToCart }) => {
+const Home = () => {
+  const { addToCart } = useCart();
+
   return (
     <div className="home">
       {products.map((product) => (
